@@ -47,7 +47,15 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h2 className="text-center">Welcome Back</h2>
+        {/* Logo */}
+        <div className="text-center mb-4">
+          <img
+            src="https://cdn.prod.website-files.com/5b5affb9e054d23e31dada55/6633910c7293e0eb10956014_starberry-logo-new%203.png"
+            alt="Starberry Logo"
+            style={{ height: "60px", objectFit: "contain" }}
+          />
+        </div>
+
         <p className="text-center text-muted">Login to your account</p>
         <form onSubmit={handleSubmit}>
           {/* Username Field */}

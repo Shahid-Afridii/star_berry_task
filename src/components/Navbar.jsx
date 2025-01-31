@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Brand Logo */}
         <Link to="/" className="navbar-brand">
           <img
-            src="https://cdn.prod.website-files.com/5b5affb9e054d23e31dada55/6633910c7293e0eb10956014_starberry-logo-new%203.png"
+        src="https://cdn.prod.website-files.com/5b5affb9e054d23e31dada55/6633910c7293e0eb10956014_starberry-logo-new%203.png"
             alt="Starberry Logo"
             style={{ height: "40px", objectFit: "contain" }}
           />
