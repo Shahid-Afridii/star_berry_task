@@ -39,54 +39,70 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-4">Contact Us</h2>
+    <div
+      className="container mt-5 p-4"
+   
+    >
+      <h2 className="text-center mb-4 text-primary">Contact Us</h2>
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <p className="text-muted text-center mb-4">
+          <p className="text-center mb-4">
             <strong>Name:</strong> Shahid Afridi<br />
-            <strong>Experience:</strong> 4 years in React and Next.js, Tailwind CSS<br />
-            <strong>Email:</strong> <a href="mailto:shahidafridics@gmail.com">shahidafridics@gmail.com</a><br />
-            <strong>Phone:</strong> <a href="tel:9092745806">9092745806</a>
+           
+            <strong>Email:</strong>{" "}
+            <a href="mailto:shahidafridics@gmail.com" className="text-decoration-none text-info">
+              shahidafridics@gmail.com
+            </a>
+            <br />
+            <strong>Phone:</strong>{" "}
+            <a href="tel:9092745806" className="text-decoration-none text-info">
+              9092745806
+            </a>
           </p>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{ padding: "1rem" }}>
             {/* Name Field */}
-            <div className="form-group mb-3">
-              <label className="form-label">Name</label>
+            <div className="form-group mb-4">
+              <label className="form-label">
+                <strong>Name</strong>
+              </label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control shadow-sm"
                 placeholder="Enter your name"
                 required
               />
             </div>
 
             {/* Email Field */}
-            <div className="form-group mb-3">
-              <label className="form-label">Email</label>
+            <div className="form-group mb-4">
+              <label className="form-label">
+                <strong>Email</strong>
+              </label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control shadow-sm"
                 placeholder="Enter your email"
                 required
               />
             </div>
 
             {/* Message Field */}
-            <div className="form-group mb-3">
-              <label className="form-label">Message</label>
+            <div className="form-group mb-4">
+              <label className="form-label">
+                <strong>Message</strong>
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control shadow-sm"
                 placeholder="Enter your message"
                 rows="5"
                 required
@@ -94,17 +110,25 @@ const ContactUs = () => {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="btn btn-primary w-100">
+            <button
+              type="submit"
+              className="btn btn-primary w-100 shadow-sm"
+              style={{
+                backgroundColor: "#007bff",
+                borderColor: "#007bff",
+                fontWeight: "bold",
+              }}
+            >
               Send Enquiry
             </button>
           </form>
 
           {/* Success or Error Message */}
           {successMessage && (
-            <div className="alert alert-success mt-3">{successMessage}</div>
+            <div className="alert alert-success mt-3 shadow-sm">{successMessage}</div>
           )}
           {errorMessage && (
-            <div className="alert alert-danger mt-3">{errorMessage}</div>
+            <div className="alert alert-danger mt-3 shadow-sm">{errorMessage}</div>
           )}
         </div>
       </div>
