@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <Router> {/* Router should wrap everything */}
+    <Router> 
       <AuthProvider>
         <AppRoutes />
       </AuthProvider>

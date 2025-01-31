@@ -22,7 +22,7 @@ const PropertyCard = ({ property }) => {
     return null;
   }
 
-  const imageUrl = attributes.images[0].srcUrl; // Use the first image's `srcUrl`
+  const imageUrl = attributes.images[0].srcUrl; 
 
   return (
     <div

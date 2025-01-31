@@ -23,8 +23,8 @@ code {
   );
   background-size: 1200px 100%;
   animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 8px; /* For rounded corners */
-  margin-bottom: 16px; /* Add spacing between shimmers */
+  border-radius: 8px; 
+  margin-bottom: 16px; 
 }
 
 @keyframes shimmer {

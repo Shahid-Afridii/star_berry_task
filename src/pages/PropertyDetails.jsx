@@ -14,7 +14,7 @@ const PropertyDetails = () => {
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
-    
+    // for responsive
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -23,7 +23,7 @@ const PropertyDetails = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+// for datas fetching
   useEffect(() => {
     const loadProperty = async () => {
       const properties = await fetchProperties(); // Fetch all properties
