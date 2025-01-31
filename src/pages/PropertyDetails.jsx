@@ -261,7 +261,7 @@ const PropertyDetails = () => {
  {/* Contact Us Block */}
 
   <a
-    href="#"
+    href="/"
     className="text-decoration-none d-flex align-items-center"
     style={{
       fontSize: isMobile ? "0.875rem" : "1.25rem", // Smaller font size for mobile
