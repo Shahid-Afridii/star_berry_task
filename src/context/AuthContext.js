@@ -1,12 +1,16 @@
-import { createContext, useState } from "react";
+// src/context/AuthContext.js
+import React, { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Create the AuthContext
 const AuthContext = createContext();
 
+// Define the AuthProvider component
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
+  // Login function
   const login = (username, password) => {
     if (username === "admin" && password === "12345678") {
       setIsAuthenticated(true);
@@ -16,11 +20,13 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Logout function
   const logout = () => {
     setIsAuthenticated(false);
     navigate("/");
   };
 
+  // Provide the context value
   return (
     <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
@@ -28,4 +34,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
+// Default export the AuthContext
 export default AuthContext;
