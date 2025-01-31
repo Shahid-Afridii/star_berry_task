@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login function
   const login = (username, password) => {
-    if (username === "admin" && password === "12345678") {
+    if (username === "admin" && password === "Welcome@123") {
       setIsAuthenticated(true);
       navigate("/home");
     } else {
