@@ -10,6 +10,11 @@ const PropertyDetails = () => {
   const [mainImage, setMainImage] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
+    // Scroll to top on component load
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
