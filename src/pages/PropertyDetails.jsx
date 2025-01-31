@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { AiOutlineShareAlt, AiOutlineHeart,AiOutlineHome } from "react-icons/ai";
 import { fetchProperties } from "../api/propertyService"; 
 
@@ -384,7 +383,7 @@ const PropertyDetails = () => {
                 )}
                 <div>
                   <strong>{crm_negotiator_id.name}</strong>
-                  {crm_negotiator_id.email && (
+                  {crm_negotiator_id.email ? (
                     <p className="mb-0">
                       <a
                         href={`mailto:${crm_negotiator_id.email}`}
@@ -393,14 +392,14 @@ const PropertyDetails = () => {
                         {crm_negotiator_id.email}
                       </a>
                     </p>
-                  )}
+                  ):null}
                 </div>
               </div>
             </div>
           )}
 
           {/* Map Section */}
-          {latitude && longitude && (
+          {latitude && longitude ? (
             <div className="mb-4">
               <h5>Location</h5>
               <div
@@ -421,7 +420,7 @@ const PropertyDetails = () => {
                 ></iframe>
               </div>
             </div>
-          )}
+          ):null}
         </div>
       </div>
     </div>
