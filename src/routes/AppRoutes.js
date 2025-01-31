@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import Home from "../pages/Home";
 import PropertyDetails from "../pages/PropertyDetails";
 import Layout from "../components/Layout";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 
 const ProtectedRoute = ({ isAuthenticated, children }) => {
   return isAuthenticated ? children : <Navigate to="/" />;
@@ -27,6 +29,8 @@ const AppRoutes = () => {
         }
       >
         <Route path="/property" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
       </Route>
 
